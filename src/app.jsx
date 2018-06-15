@@ -9,19 +9,19 @@ class App extends Component {
     this.state = {
       defaultChirps: [
         {
-          userId: '',
-          name: '',
-          text: '',
+          userId: "floppytaco",
+          name: "Fred Armisen",
+          text: "I'll be your Santa Claus if you want, and I'll be every god damn elf you want.",
         },
         {
-          userId: '',
-          name: '',
-          text: '',
+          userId: 'anustart12',
+          name: 'Tobias Funke',
+          text: ' Michael, you are quite the cupid. You can stick an arrow in my buttocks any time.',
         },
         {
-          userId: '',
-          name: '',
-          text: '',
+          userId: 'titussss',
+          name: 'Titus Andromedon',
+          text: "Pinot Noir Caviar, Myanmar Mid-sized car You don't have to be popu-lar Find out who your true friends are",
         }
       ]
 
@@ -29,8 +29,8 @@ class App extends Component {
   }
 
   newChirp = (event) => {
-    this.setState({text: event.target.value})
-}
+    this.setState({ text: event.target.value })
+  }
 
   render() {
     return (
