@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css'
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -27,15 +28,15 @@ class App extends Component {
     }
   }
 
+  newChirp = (event) => {
+    this.setState({text: event.target.value})
+}
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Chirper</h1>
-        </header>
-        <p className="App-intro">
-        </p>
+      <div>
+        <textarea className="form-control col-sm-8 center-block" rows="5" id="comment" onChange={this.newChirp}></textarea>
+        <button type="submit" className="btn btn-success my-3">Chirp!</button>
       </div>
     );
   }

@@ -1,9 +1,11 @@
 import React from 'react';
-const cardlist = (props) => {
+const Cardlist = (props) => {
 
   return(
-    <h1>Simple H1 Element</h1>
+    <div>{this.state.defaultChirp.map((defaultChirp, index) => (
+      <div>{defaultChirp.props.userID}{defaultChirp.props.name}{defaultChirp.props.text}</div>
+  ))}</div>
   );
 }
 
-export default cardlist;
+export default Cardlist;

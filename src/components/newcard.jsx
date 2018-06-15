@@ -1,5 +1,5 @@
 import React from 'react';
-const newPost = (props) => {
+const Newcard = (props) => {
 
     return (
         <div className="card bg-light mb-3 justify-content-center" style="max-width: 18rem;">
@@ -9,7 +9,8 @@ const newPost = (props) => {
                 <p className="card-text">{this.props.text}</p>
             </div>
         </div>
+
     );
 }
 
-export default newPost;
+export default Newcard;
