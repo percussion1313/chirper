@@ -1,11 +1,20 @@
 import React from 'react';
-const Cardlist = (props) => {
+import Newcard from './Newcard';
 
-  return(
-    <div>{this.state.defaultChirp.map((defaultChirp, array) => (
-      <div>{defaultChirp.props.userID}{defaultChirp.props.name}{defaultChirp.props.text}</div>
-  ))}</div>
+const Cardlist = (props) => {
+  
+  let cards = props.items.map((card, index) => {
+    return <Newcard key={index} cardDetails={card} />;
+  });
+
+  return (
+      <div className="col-md-6 m-0">
+        <div className="row flex-md-row">{cards}</div>
+      </div>
   );
-}
+};
+
+
+
 
 export default Cardlist;

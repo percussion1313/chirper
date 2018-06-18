@@ -1,12 +1,12 @@
 import React from 'react';
+
 const Newcard = (props) => {
 
     return (
-        <div className="card bg-light mb-3 justify-content-center" style="max-width: 18rem;">
-            <div className="card-header">{this.props.userId}</div>
-            <div className="card-body">
-                <h5 className="card-title">{this.props.name}</h5>
-                <p className="card-text">{this.props.text}</p>
+        <div className="card bg-light mb-3 m-0 ">
+            <div className="card-header bg-primary text-white">{props.cardDetails.username}</div>
+            <div className="card-body ">
+                <h5 className="card-title">{props.cardDetails.chirp}</h5>
             </div>
         </div>
 
