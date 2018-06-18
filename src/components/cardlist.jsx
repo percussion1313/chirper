@@ -9,7 +9,7 @@ const Cardlist = (props) => {
   });
 
   return (
-      <div className="col-md-6 m-3 d-flex justify-content-center">
+      <div className="col-md-6 m-3 justify-content-center mx-auto">
         <div className="row flex-md-row">{cards}</div>
       </div>
   );

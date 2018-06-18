@@ -4,16 +4,16 @@ const Submitform = (props) => {
 
     return (
         <div>
-            <div class="col-md-6">
+            <div class="col-md-6 mx-auto">
                 <input type="text" id="username" placeholder="Username" />
             </div>
-            <textarea className="form-control col-sm-6 pagination-centered m-3 position-relative" id="chirp"></textarea>
+            <textarea className="form-control col-md-6 pagination-centered m-3 position-relative shadow mx-auto" id="chirp"></textarea>
             <div>
                 <button
-                    className="btn btn-primary m-3 d-flex justify-content-center"
+                    className="btn btn-primary m-3 d-flex mx-auto col-md-3  shadow"
                     name="cardSubmitButton"
                     onClick={event => props.postChirp(event)}>Chirp
-        </button>
+             </button>
             </div>
         </div>
 
