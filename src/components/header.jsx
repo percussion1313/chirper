@@ -1,14 +1,13 @@
-import React from "react";
+import React, {Component} from "react";
 
-class Header extends React.Component{
+
+class Header extends Component {
     render(){
         return (
            <nav className="Nav">
              <div className="Nav-menus">
-               <div className="Nav-brand">
-                 <a className="Nav-brand-logo d-flex justify-content-center" href="/">
-                   Chirper
-                 </a>
+               <div className="Nav-brand display-3 d-flex justify-content-center">
+                 <a>Chirper</a>
                </div>
              </div>
            </nav>

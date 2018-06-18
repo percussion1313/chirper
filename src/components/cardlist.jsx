@@ -1,6 +1,7 @@
 import React from 'react';
 import Newcard from './Newcard';
 
+
 const Cardlist = (props) => {
   
   let cards = props.items.map((card, index) => {
@@ -8,7 +9,7 @@ const Cardlist = (props) => {
   });
 
   return (
-      <div className="col-md-6 m-0">
+      <div className="col-md-6 m-3 d-flex justify-content-center">
         <div className="row flex-md-row">{cards}</div>
       </div>
   );

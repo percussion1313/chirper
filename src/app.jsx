@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './components/header';
 import Cardlist from './components/Cardlist';
+import Submitform from './components/Submitform';
 
 
 class App extends Component {
@@ -11,8 +12,8 @@ class App extends Component {
     this.state = {
       defaultChirps: [
         {
-          username: "floppytaco",
-          chirp: "I'll be your Santa Claus if you want, and I'll be every god damn elf you want.",
+          username: "chrundlethegreat",
+          chirp: "Yes, my good man, I'll have the milk steak, boiled over hard, and your finest jelly beans...raw.",
         },
         {
           username: 'anustart12',
@@ -25,24 +26,27 @@ class App extends Component {
       ]
 
     }
+
+    this.postChirp = (event) => {
+      let newChirp = {
+        username: document.getElementById("username").value,
+        chirp: document.getElementById("chirp").value
+      };
+      this.setState({
+        defaultChirps: this.state.defaultChirps.concat([newChirp])
+      });
+    }
   }
 
-  postChirp = (e) => {
-    e.preventDefault();
-    const defaultChirps = this.state;
 
-    this.setState = ({
-      defaultChirps: [this.state.defaultChirps]
-    })
-  }
+
 
   render() {
     return (
       <div>
         <Header />
-        <Cardlist items={this.state.defaultChirps} />
-        <textarea className="form-control col-sm-8 justify-content-center" rows="4" id="comment" onChange={this.newChirp}></textarea>
-        <button type="submit" className="btn btn-primary my-3 inline" onSubmit={(e) => {this.postChirp[e]}} >Chirp!</button>
+        <Cardlist items = {this.state.defaultChirps} />
+        <Submitform postChirp = {this.postChirp}/>
       </div>
     );
   }
